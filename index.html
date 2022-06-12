@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="author" content="Pro_ktmr">
+	
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.widgets.min.js"></script>
+    <link rel="stylesheet" href="style.css?ver=210502" type="text/css" />
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    
+    <meta name="description" content="OJ-OI では JOI、APIO、IOI の過去問を解くことができます。また、オンラインジャッジでの自分やライバルの提出状況を表示することができます。競技プログラミングの学習にご利用ください。">
+    
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="canonical" href="http://aoj-pck.vsw.jp/oj-oi/" />
+
+    <script>
+        document.write(
+          '<script type="text/javascript" src="script.js?ver=' +  new Date().getTime() + '"><\/script>'
+        );
+      </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89866809-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-89866809-2');
+    </script>
+
+	<title>OJ-OI (JOI/APIO/IOI 過去問)</title>
+	
+</head>
+<body>
+    <header>
+        <h1><a class="title" href="http://aoj-pck.vsw.jp/oj-oi/">OJ-OI (JOI/APIO/IOI 過去問)</a></h1>
+        <p>JOI/APIO/IOI の過去問を oj.uz で解いたり、自分やライバルの提出状況を表示することができます。<br/>
+        You can solve the problems of JOI/APIO/IOI and see the status of your rivals.</p>
+    </header>
+    <div class="modal" id="loading">
+        <p>
+            読み込み中
+        </p>
+    </div>
+    <div id="search">
+        <h2>検索 | Search</h2>
+        <form method="get">
+            <table id="search_table">
+                    <colgroup>
+                        <col width="15%">
+                        <col width="35%">
+                        <col width="15%">
+                        <col width="35%">
+                    </colgroup>
+                <tbody>
+                    <tr>
+                        <th>自分 | User ID</th>
+                        <td>
+                            <input type="text" id="ojuz_id" name="ojuz_id" placeholder="自分の oj.uz ID" size="40">
+                            <!--<input type="hidden" name="sta" value="off"><input type="checkbox" id="sta" name="sta" disabled>統計-->
+                        </td>
+                        <th>年 | Years</th>
+                        <td>
+                            <select id="year_begin" name="year_begin">
+                                <option value="2007" selected>2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>〜
+                            <select id="year_end" name="year_end">
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022" selected>2022</option>
+                            </select>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ライバル | Rivals</th>
+                        <td>
+                            <input type="text" id="rival_ojuz_id" name="rival_ojuz_id" placeholder="ライバルの oj.uz ID (カンマ区切り)" size="40">
+                            <!--<input type="hidden" name="rival_sta" value="off"><input type="checkbox" id="rival_sta" name="rival_sta" disabled>統計-->
+                        </td>
+                        <th>大会 | Categories</th>
+                        <td>
+                            <!--<input type="hidden" name="joiho" value="off">--><input type="hidden" name="joisp" value="off"><input type="hidden" name="joiop" value="off"><input type="hidden" name="apio" value="off"><input type="hidden" name="ioi" value="off">
+                            <!--<input type="checkbox" id="joiho" name="joiho" disabled="disabled">JOIho-->
+                            <input type="checkbox" id="joisp" name="joisp" checked>JOIsp
+                            <input type="checkbox" id="joiop" name="joiop" checked>JOIop
+                            <input type="checkbox" id="apio" name="apio" checked>APIO
+                            <input type="checkbox" id="ioi" name="ioi" checked>IOI
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>オプション | Options</th>
+                        <td>
+                            <select id="sort" name="sort">
+                                <option value="default">並び替えない</option>
+                                <option value="difficulty" selected>難易度順</option>
+                            </select>
+                            <input type="hidden" name="nojudge" value="off"><input type="checkbox" id="nojudge" name="nojudge" checked>ジャッジ未存在問題を非表示
+                        </td>
+                        <th>問題タイプ | Task Type</th>
+                        <td>
+                            <input type="hidden" name="batch" value="off"><input type="checkbox" id="batch" name="batch" checked>Batch
+                            <input type="hidden" name="interactive" value="off"><input type="checkbox" id="interactive" name="interactive" checked>Interactive
+                            <input type="hidden" name="communication" value="off"><input type="checkbox" id="communication" name="communication" checked>Communication
+                            <input type="hidden" name="output_only" value="off"><input type="checkbox" id="output_only" name="output_only" checked>Output Only
+                            <input type="hidden" name="unknown_type" value="off"><input type="checkbox" id="unknown_type" name="unknown_type" checked>未分類
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">表示 | Search</button>
+        </form>
+        <p>※ページをブックマークすると毎回の入力を省略することができます。</p>
+    </div>
+
+    <div id="statistic">
+        
+    </div>
+
+    <div id="problem">
+        <h2>問題一覧 | Problem List</h2>
+        <table id="problem_table_main" class="tablesorter">
+            <colgroup>
+                <col width="10%">
+                <col width="0%">
+                <col width="15%">
+                <col width="30%">
+                <col width="10%">
+                <col width="10%">
+                <col width="25%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="p">難易度<br/>Level</th>
+                    <th class="p"><!--問題ID<br/>Problem ID--></th>
+                    <th class="p">出典<br/>Source</th>
+                    <th class="p">問題名<br/>Problem Name</th>
+                    <th class="p">問題タイプ<br/>Task Type</th>
+                    <th class="p">問題文<br/>Translations</th>
+                    <th class="p">ライバル<br/>Rivals</th>
+                </tr>
+            </thead>
+            <tbody id="problem_table">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>更新履歴｜Change Log</h2>
+        <p>
+            2021/05/02<br/>
+            ・問題タイプ (Batch/Interactive/Communication/Output Only) に対応しました。
+        </p>
+        <p>
+            2019/04/15<br/>
+            ・日本語問題文へのリンクを追加しました。<br/>
+            ・oj.uzへのリンクを提出ページへのリンクに変更しました。
+        </p>
+        <p>
+            2019/04/14<br/>
+            ・ジャッジ未存在問題に<span class="unavailable">Unavailable</span>と表示する機能を実装しました。<br/>
+            ・ジャッジ未存在問題をリストに表示しない機能を実装しました。<br/>
+            ・ページ読み込み時に最初から並び替えが行われているようになる機能を実装しました。
+        </p>
+        <p>
+            2019/04/13<br/>
+            ・2019年の問題が表示できないバグを修正しました。<br/>
+            ・ジャッジ未存在問題が不正解と判定されるバグを修正しました。
+        </p>
+        <p>
+            2019/03/28<br/>
+            ・JOI春合宿の問題に対応しました。
+        </p>
+        <p>
+            2019/03/26<br/>
+            ・問題のDayと問題番号も表示するよう仕様変更しました。
+        </p>
+        <p>
+            2019/03/25<br/>
+            ・ソート機能を実装しました。
+        </p>
+        <p>
+            2019/03/24<br/>
+            ・サイトを公開しました。
+        </p>
+    </div>
+
+    <div>
+        <h2>リンク | Link</h2>
+        <ul>
+            ・<a href="https://www.aoj-pck.vsw.jp/">AOJ-PCK</a><br/>
+            Pro_ktmr が運営するサイトです。<br/>
+            ・<a href="https://docs.google.com/spreadsheets/d/1JaWDeX_cQkoLkMPrdclkoq_qFpt5mNQSp3XMwXbGVYc/edit#gid=0">IOI / APIO 非公式難易度表</a><br/>
+            投票はこちらからお願いします。
+        </ul>
+    </div>
+
+    <p>ご意見・ご連絡等は Pro.ktmr☆gmail.com または @Pro_ktmr までお願い致します。</p>
+
+    <div id="sita"></div>
+    
+    <div id="clock_frame">
+        <span id="clock_date"></span>
+        <span id="clock_time"></span>
+    </div>
+</body>
