@@ -157,8 +157,8 @@
                   <td>{{task.type}}</td>
                   <td>
                     <v-chip v-for="rival_status in task.rivals_status" v-if="rival_status.status !== 'none'"
-                      v-bind:color="rival_status.status == 'ac' ? 'green' : 'amber'" text-color="white" class="mx-1 px-1"
-                      label small>{{rival_status.name}}</v-chip>
+                      v-bind:color="rival_status.status == 'ac' ? 'green' : 'amber'" text-color="white"
+                      class="mx-1 px-1" label small>{{rival_status.name}}</v-chip>
                   </td>
                 </tr>
               </tbody>
@@ -169,6 +169,9 @@
         <v-container style="max-width: 950px;">
           <h2>リンク集</h2>
           <ul>
+            <li><a href="https://docs.google.com/spreadsheets/d/1zXDtkFmskO5NSxkqck8uDbcJtAhTVZtzPh2hLw64Sw4/edit#gid=0"
+                target="_blank">JOI 非公式難易度表</a><br />
+              投票はこちらからお願いします．</li>
             <li><a href="https://docs.google.com/spreadsheets/d/1JaWDeX_cQkoLkMPrdclkoq_qFpt5mNQSp3XMwXbGVYc/edit#gid=0"
                 target="_blank">IOI
                 / APIO 非公式難易度表</a><br />
