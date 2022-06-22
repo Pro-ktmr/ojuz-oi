@@ -17,7 +17,8 @@ const batch = params.has('batch') ? parseBoolean(params.get('batch')) : true;
 const interactive = params.has('interactive') ? parseBoolean(params.get('interactive')) : true;
 const communication = params.has('communication') ? parseBoolean(params.get('communication')) : true;
 const output_only = params.has('output_only') ? parseBoolean(params.get('output_only')) : true;
-const show_unavailable = params.has('output_only') ? parseBoolean(params.get('show_unavailable')) : false;
+const show_unavailable = params.has('show_unavailable') ? parseBoolean(params.get('show_unavailable')) : false;
+const show_ac = params.has('show_ac') ? parseBoolean(params.get('show_ac')) : true;
 const sort_key = params.has('sort_key') ? params.get('sort_key') : 'difficulty';
 
 function getYears() {
@@ -57,6 +58,7 @@ let app = new Vue({
         communication: params.has('communication') ? parseBoolean(params.get('communication')) : true,
         output_only: params.has('output_only') ? parseBoolean(params.get('output_only')) : true,
         show_unavailable: params.has('show_unavailable') ? parseBoolean(params.get('show_unavailable')) : false,
+        show_ac: params.has('show_ac') ? parseBoolean(params.get('show_ac')) : true,
         sort_key: params.has('sort_key') ? params.get('sort_key') : 'difficulty',
         sort_keys: [
             { 'text': '難易度順', value: 'difficulty' },
@@ -80,6 +82,7 @@ let app = new Vue({
             params.set('communication', this.communication);
             params.set('output_only', this.output_only);
             params.set('show_unavailable', this.show_unavailable);
+            params.set('show_ac', this.show_ac);
             params.set('sort_key', this.sort_key);
             window.location.replace(url.href);
         },
@@ -96,6 +99,8 @@ let app = new Vue({
                 if (task.type == 'Communication' && !communication) continue;
                 if (task.type == 'Output Only' && !output_only) continue;
                 if (task.unavailable && !show_unavailable) continue;
+                if (my_handle in this.userStatus
+                    && this.userStatus[my_handle]['ac'].includes(task.id) && !show_ac) continue;
 
                 if (my_handle in this.userStatus
                     && this.userStatus[my_handle]['ac'].includes(task.id))

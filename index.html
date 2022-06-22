@@ -92,8 +92,12 @@
                 </v-row>
 
                 <v-row>
-                  <v-col cols="12">
+                  <v-col cols="6">
                     <v-switch v-model="show_unavailable" :label="show_unavailable ? 'ジャッジ未存在問題を表示' : 'ジャッジ未存在問題を非表示'">
+                    </v-switch>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-switch v-model="show_ac" :label="show_ac ? 'ACした問題を表示' : 'ACした問題を非表示'">
                     </v-switch>
                   </v-col>
                 </v-row>
