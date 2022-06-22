@@ -1353,6 +1353,138 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2021/2021-sp-tasks/day4/worst_reporter4.pdf"
     },
     {
+        difficulty: "",
+        id: "JOI22_jail",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day1-1",
+        name: "Jail",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/jail.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_kyoto",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day1-2",
+        name: "Sightseeing in Kyoto",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/kyoto.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_misspelling",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day1-3",
+        name: "Misspelling",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/misspelling.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_copypaste3",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day2-1",
+        name: "Copy and Paste 3",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/copypaste3.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_flights",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day2-2",
+        name: "Flights",
+        type: "Communication",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/flights.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_team",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day2-3",
+        name: "Team Contest",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/team.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_device2",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day3-1",
+        name: "Broken Device 2",
+        type: "Interactive",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/device2.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_sprinkler",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day3-2",
+        name: "Sprinkler",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/sprinkler.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_sugar",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day3-3",
+        name: "Ants and Sugar",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/sugar.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_dango3",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day4-1",
+        name: "Super Dango Maker",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest4/dango3.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_fish2",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day4-2",
+        name: "Fish 2",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest4/fish2.pdf"
+    },
+    {
+        difficulty: "",
+        id: "JOI22_reconstruction",
+        year: 2022,
+        comp: "JOIsp",
+        day: "Day4-3",
+        name: "Reconstruction Project",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest4/reconstruction.pdf"
+    },
+    {
         difficulty: '',
         id: "JOI13_dispartiy",
         year: 2013,
@@ -2000,6 +2132,39 @@ var tasks = [
         type: "Batch",
         unavailable: false,
         statement_ja: "https://github.com/ia-toki/apio-2021-statements/blob/master/roads/ja_JP.pdf"
+    },
+    {
+        difficulty: "",
+        id: "APIO22_mars",
+        year: 2022,
+        comp: "APIO",
+        day: "1",
+        name: "Mars",
+        type: "Communication",
+        unavailable: false,
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/mars/mars%20ja_JP.pdf"
+    },
+    {
+        difficulty: "",
+        id: "APIO22_game",
+        year: 2022,
+        comp: "APIO",
+        day: "2",
+        name: "Game",
+        type: "Interactive",
+        unavailable: false,
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/game/game%20ja_JP.pdf"
+    },
+    {
+        difficulty: "",
+        id: "APIO22_perm",
+        year: 2022,
+        comp: "APIO",
+        day: "3",
+        name: "Permucation",
+        type: "Batch",
+        unavailable: false,
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/perm/perm%20ja_JP.pdf"
     },
     {
         difficulty: 9,
