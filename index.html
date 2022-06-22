@@ -33,8 +33,8 @@
       </v-app-bar>
       <v-main>
 
-        <v-container>
-          <v-card class="my-10 mx-auto" max-width="950px">
+        <v-container style="max-width: 950px;">
+          <v-card class="my-10 mx-auto">
             <v-container>
               <v-form ref="form">
                 <v-row>
@@ -121,8 +121,11 @@
           </v-card>
         </v-container>
 
-        <v-container>
-          <v-simple-table style="max-width: 950px;" class="mx-auto">
+        <v-container style="max-width: 950px;">
+          <p>
+            非公式難易度の最終更新：2022/06/22
+          </p>
+          <v-simple-table class="mx-auto">
             <template v-slot:default>
               <thead>
                 <tr>

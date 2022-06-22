@@ -1353,7 +1353,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2021/2021-sp-tasks/day4/worst_reporter4.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 11,
         id: "JOI22_jail",
         year: 2022,
         comp: "JOIsp",
@@ -1364,7 +1364,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/jail.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 12,
         id: "JOI22_kyoto",
         year: 2022,
         comp: "JOIsp",
@@ -1375,7 +1375,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/kyoto.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 10,
         id: "JOI22_misspelling",
         year: 2022,
         comp: "JOIsp",
@@ -1386,7 +1386,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest1/misspelling.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 11,
         id: "JOI22_copypaste3",
         year: 2022,
         comp: "JOIsp",
@@ -1397,7 +1397,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/copypaste3.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 13,
         id: "JOI22_flights",
         year: 2022,
         comp: "JOIsp",
@@ -1408,7 +1408,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/flights.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 10,
         id: "JOI22_team",
         year: 2022,
         comp: "JOIsp",
@@ -1419,7 +1419,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest2/team.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 12,
         id: "JOI22_device2",
         year: 2022,
         comp: "JOIsp",
@@ -1430,7 +1430,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/device2.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 10,
         id: "JOI22_sprinkler",
         year: 2022,
         comp: "JOIsp",
@@ -1441,7 +1441,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/sprinkler.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 12,
         id: "JOI22_sugar",
         year: 2022,
         comp: "JOIsp",
@@ -1452,7 +1452,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest3/sugar.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 9,
         id: "JOI22_dango3",
         year: 2022,
         comp: "JOIsp",
@@ -1463,7 +1463,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest4/dango3.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 12,
         id: "JOI22_fish2",
         year: 2022,
         comp: "JOIsp",
@@ -1474,7 +1474,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/camp/2022/2022-sp-tasks/contest4/fish2.pdf"
     },
     {
-        difficulty: "",
+        difficulty: 11,
         id: "JOI22_reconstruction",
         year: 2022,
         comp: "JOIsp",
@@ -1826,17 +1826,6 @@ var tasks = [
         statement_ja: "http://s3-ap-northeast-1.amazonaws.com/data.cms.ioi-jp.org/open-2021/monster/2021-open-monster-statement.pdf"
     },
     {
-        difficulty: '',
-        id: "APIO13_interference",
-        year: 2013,
-        comp: "APIO",
-        day: "Practice",
-        name: "Interference",
-        type: "Output Only",
-        unavailable: false,
-        statement_ja: ""
-    },
-    {
         difficulty: 10,
         id: "APIO13_robots",
         year: 2013,
@@ -1848,7 +1837,7 @@ var tasks = [
         statement_ja: ""
     },
     {
-        difficulty: '',
+        difficulty: 12,
         id: "APIO13_toll",
         year: 2013,
         comp: "APIO",
@@ -1866,7 +1855,7 @@ var tasks = [
         day: "3",
         name: "Tasks Author",
         type: "Batch",
-        unavailable: false,
+        unavailable: true,
         statement_ja: ""
     },
     {
@@ -1944,7 +1933,7 @@ var tasks = [
         name: "Boat",
         type: "Batch",
         unavailable: false,
-        statement_ja: "http://apio-olympiad.org/2016/tasks/boat/descriptions/jp_JP.pdf"
+        statement_ja: ""
     },
     {
         difficulty: 11,
@@ -1955,7 +1944,7 @@ var tasks = [
         name: "Fireworks",
         type: "Batch",
         unavailable: false,
-        statement_ja: "http://apio-olympiad.org/2016/tasks/fireworks/descriptions/jp_JP.pdf"
+        statement_ja: ""
     },
     {
         difficulty: 10,
@@ -1966,7 +1955,7 @@ var tasks = [
         name: "Gap",
         type: "Interactive",
         unavailable: false,
-        statement_ja: "http://apio-olympiad.org/2016/tasks/gap/descriptions/jp_JP.pdf"
+        statement_ja: ""
     },
     {
         difficulty: 12,
@@ -2142,7 +2131,7 @@ var tasks = [
         name: "Mars",
         type: "Communication",
         unavailable: false,
-        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/mars/mars%20ja_JP.pdf"
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/blob/master/Statements/mars/mars%20ja_JP.pdf"
     },
     {
         difficulty: "",
@@ -2153,7 +2142,7 @@ var tasks = [
         name: "Game",
         type: "Interactive",
         unavailable: false,
-        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/game/game%20ja_JP.pdf"
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/blob/master/Statements/game/game%20ja_JP.pdf"
     },
     {
         difficulty: "",
@@ -2164,7 +2153,7 @@ var tasks = [
         name: "Permucation",
         type: "Batch",
         unavailable: false,
-        statement_ja: "https://github.com/apio2022/apio2022_tasks/raw/master/Statements/perm/perm%20ja_JP.pdf"
+        statement_ja: "https://github.com/apio2022/apio2022_tasks/blob/master/Statements/perm/perm%20ja_JP.pdf"
     },
     {
         difficulty: 9,
@@ -2552,7 +2541,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2012/tasks/odometer-jp.pdf"
     },
     {
-        difficulty: 11,
+        difficulty: 10,
         id: "IOI12_rings",
         year: 2012,
         comp: "IOI",
@@ -3267,7 +3256,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2020/tasks/day1-supertrees-JPN.pdf"
     },
     {
-        difficulty: 12,
+        difficulty: 11,
         id: "IOI20_tickets",
         year: 2020,
         comp: "IOI",
@@ -3311,7 +3300,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2020/tasks/day2-stations-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 11,
         id: "IOI21_candies",
         year: 2021,
         comp: "IOI",
@@ -3322,7 +3311,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2021/tasks/day1-candies-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 12,
         id: "IOI21_keys",
         year: 2021,
         comp: "IOI",
@@ -3333,7 +3322,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2021/tasks/day1-keys-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 12,
         id: "IOI21_parks",
         year: 2021,
         comp: "IOI",
@@ -3344,7 +3333,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2021/tasks/day1-parks-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 7,
         id: "IOI21_dna",
         year: 2021,
         comp: "IOI",
@@ -3355,7 +3344,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2021/tasks/day2-dna-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 11,
         id: "IOI21_dungeons",
         year: 2021,
         comp: "IOI",
@@ -3366,7 +3355,7 @@ var tasks = [
         statement_ja: "https://www.ioi-jp.org/ioi/2021/tasks/day2-dungeons-JPN.pdf"
     },
     {
-        difficulty: '',
+        difficulty: 12,
         id: "IOI21_registers",
         year: 2021,
         comp: "IOI",
