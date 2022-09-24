@@ -1,3 +1,4 @@
+const BACKEND_URL = 'https://ojuz-oi-backend.fly.dev';
 const url = new URL(window.location.href);
 const params = url.searchParams;
 
@@ -142,7 +143,7 @@ let app = new Vue({
 
             const handles = [my_handle].concat(rivals_handle);
             for (let handle of handles) {
-                fetch(`https://ojuz-oi-backend.herokuapp.com/${handle}`)
+                fetch(`${BACKEND_URL}/${handle}`)
                     .then(response => response.json())
                     .then(data => {
                         app.userStatus[handle] = data;
